@@ -9,6 +9,7 @@ namespace API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+     [ApiExplorerSettings(IgnoreApi = true)]//Kullanıcılar direk endpoint olarak erişemesin
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
