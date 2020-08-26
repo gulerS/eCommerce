@@ -5,6 +5,8 @@
   <ItemGroup>
 
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.7" />
+
+    <PackageReference Include="System.Text.Json" Version="4.7.2" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
