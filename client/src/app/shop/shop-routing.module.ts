@@ -6,7 +6,11 @@ import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   { path: '', component: ShopComponent }, // path : shop because at the moment root module is ShopModule
-  { path: ':id', component: ProductDetailsComponent },
+  {
+    path: ':id',
+    component: ProductDetailsComponent,
+    data: { breadcrumb: { alias: 'productDetails' } },
+  },
 ];
 
 @NgModule({
