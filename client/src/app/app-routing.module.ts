@@ -7,14 +7,26 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, data: { breadcrumb: 'Home' } },
-  { path: 'test-error', component: TestErrorComponent, data: { breadcrumb: 'Test Errors' }  },
-  { path: 'server-error', component: ServerErrorComponent, data: { breadcrumb: 'Server Error' }  },
+  { path: 'test-error', component: TestErrorComponent, data: { breadcrumb: 'Test Errors' } },
+  { path: 'server-error', component: ServerErrorComponent, data: { breadcrumb: 'Server Error' } },
   { path: 'not-found', component: NotFoundComponent },
   {
     path: 'shop',
     loadChildren: () =>
       import('./shop/shop.module').then((mod) => mod.ShopModule)
-      , data: { breadcrumb: 'Shop' }
+    , data: { breadcrumb: 'Shop' }
+  },
+  {
+    path: 'basket',
+    loadChildren: () =>
+      import('./basket/basket.module').then((mod) => mod.BasketModule)
+    , data: { breadcrumb: 'Basket' }
+  },
+  {
+    path: 'checkout',
+    loadChildren: () =>
+      import('./checkout/checkout.module').then((mod) => mod.CheckoutModule)
+    , data: { breadcrumb: 'Checkout' }
   },
   // { path: 'shop', component: ShopComponent },
   // { path: 'shop/:id', component: ProductDetailsComponent },
@@ -25,4 +37,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
