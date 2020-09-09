@@ -1,5 +1,10 @@
 {
     "git.ignoreLimitWarning": true,
     "notebook.displayOrder": [],
-    "locale":"en-US"
+    "locale": "en-US",
+    "angular2-switcher.templateFormats": [
+        
+
+        ".html"
+    ]
 }
