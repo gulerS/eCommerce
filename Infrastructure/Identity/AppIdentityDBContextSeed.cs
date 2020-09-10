@@ -23,7 +23,7 @@ namespace Infrastructure.Identity
                         Street = "1. Sokak",
                         City = "Istanbul",
                         State = "TR",
-                        ZipCode = "34100"
+                        Zipcode = "34100"
                     }
                 };
                 await userManager.CreateAsync(user, "Pa$$w0rd");

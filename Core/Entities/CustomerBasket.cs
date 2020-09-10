@@ -10,11 +10,14 @@ namespace Core.Entities
 
         public CustomerBasket(string id)
         {
-            this.Id = id;
-
+            Id = id;
         }
+
         public string Id { get; set; }
         public List<BasketItems> Items { get; set; } = new List<BasketItems>();
-
+        public int? DeliveryMethodId { get; set; }
+        public string ClientSecret { get; set; }
+        public string PaymentIntentId { get; set; }
+        public decimal ShippingPrice { get; set; }
     }
 }
