@@ -38,6 +38,7 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts([FromQuery] ProductSpecParams productParams)
         {
+            //  System.Threading.Thread.Sleep(1000); //client cache test
             var spec = new ProductsWithTypesAndBrandsSpecification(productParams);
             var countSpec = new ProductWithFiltersForCountSpecification(productParams);
 
@@ -56,7 +57,7 @@ namespace API.Controllers
 
         public async Task<ActionResult<ProductToReturnDto>> GetProduct(int id)
         {
-
+            //  System.Threading.Thread.Sleep(1000); //client cache test
             var spec = new ProductsWithTypesAndBrandsSpecification(id);
 
             var product = await _productsRepo.GetEntityWithSpec(spec);
